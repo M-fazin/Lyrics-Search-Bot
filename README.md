@@ -7,6 +7,7 @@ A Telegram Bot That Can Find Lyrics Of Song
 
 <a href="https://telegram.dog/EKBOTZ_UPDATE"><img src="https://img.shields.io/badge/Telegram-Channel-blue.svg?logo=telegram"></a>
 <a href="https://telegram.dog/ekbotz_support"><img src="https://img.shields.io/badge/Telegram-Group-blue.svg?logo=telegram"></a>
+<a href="https://telegram.dog/EK_Lyrics_Search_Bot"><img src="https://img.shields.io/badge/Telegram-Bot-blue.svg?logo=telegram"></a>
 
 ---
 
