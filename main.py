@@ -73,3 +73,6 @@ def lyrics(song):
         text += f'{fin["lyrics"]}'
         text += '\n\n\n**Made With ❤️ By @EKBOTZ_UPDATE**'
         return text
+
+
+Ek.run()
