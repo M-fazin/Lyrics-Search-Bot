@@ -1,6 +1,8 @@
 # Lyrics-Search-Bot
 ---
+
 A Telegram Bot That Can Find Lyrics Of Song
+
 ---
 
 <a href="https://telegram.dog/EKBOTZ_UPDATE"><img src="https://img.shields.io/badge/Telegram-Channel-blue.svg?logo=telegram"></a>
@@ -47,4 +49,4 @@ Copyright (c) 2021 Muhammed Fazin EK [MIT License](/LICENSE)
 
 - [M-fazin](https://github.com/M-fazin) (Developer & Owner)
 - [Pyrogram](https://pyrogram.org) (Library)
-- [Aditya]
+- [Aditya](https://github.com/xditya) For His [API](https://apis.xditya.me/lyrics?song=)
