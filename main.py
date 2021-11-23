@@ -53,10 +53,23 @@ async def sng(bot, message):
         hy = await message.reply_text("`Processing`")
         song = message.text
         chat_id = message.from_user.id
-        rpl = userinfo(username)
+        rpl = lyrics(song) 
         try:
                 await hy.delete()
-                await message.reply_text(chat_id, caption = rpl, reply_to_message_id = message.message_id, reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Link 🔗 ", url = f"github.com/{username}")], [InlineKeyboardButton("🧑‍💻 Channel", url = "https://telegram.me/EKBOTZ_UPDATE"),InlineKeyboardButton("🗃️ Source Code", url = "https://github.com/M-fazin/Github-Search-Bot")]]))
+                await EK.send_message(chat_id, text = rpl, reply_to_message_id = message.message_id, reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Dev 🔗 ", url = f"github.com/M-fazin")], [InlineKeyboardButton("🧑‍💻 Channel", url = "https://telegram.me/EKBOTZ_UPDATE"),InlineKeyboardButton("🗃️ Source Code", url = "https://github.com/M-fazin/Github-Search-Bot")]]))
         except requests.ConnectionError as exception:
         	await hy.delete()
-        	await message.reply_text(f"I Can't Find A User With `{username}`", quote = True, reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🧑‍💻 Developer", url = f"github.com/M-fazin")], [InlineKeyboardButton("🧑‍💻 Channel", url = "https://telegram.me/EKBOTZ_UPDATE"),InlineKeyboardButton("🗃️ Source Code", url = "https://github.com/M-fazin/Github-Search-Bot")]]))
+        	await message.reply_text(f"I Can't Find A Song With `{song}`", quote = True, reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🧑‍💻 Developer", url = f"github.com/M-fazin")], [InlineKeyboardButton("🧑‍💻 Channel", url = "https://telegram.me/EKBOTZ_UPDATE"),InlineKeyboardButton("🗃️ Source Code", url = "https://github.com/M-fazin/Github-Search-Bot")]]))
+
+
+def search(song):
+        r = requests.get(API + song)
+        find = r.json()
+        return find
+       
+def lyrics(song):
+        fin = search(song)
+        text = f'**🎶 Successfully Extracted Lyrics Of {song} 🎶**\n\n\n\n'
+        text += f'{fin["lyrics"]}'
+        text += '\n\n\n**Made With ❤️ By @EKBOTZ_UPDATE**'
+        return text
