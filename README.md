@@ -50,3 +50,19 @@ Copyright (c) 2021 Muhammed Fazin EK [MIT License](/LICENSE)
 - [M-fazin](https://github.com/M-fazin) (Developer & Owner)
 - [Pyrogram](https://pyrogram.org) (Library)
 - [Aditya](https://github.com/xditya) For His [API](https://apis.xditya.me/lyrics?song=)
+
+---
+
+## Notice
+
+`Kangers Stay Away. Don't Kang Without Permission & Credits`
+
+---
+
+## Contribution
+
+```
+Contributors are always welcome
+```
+
+---
