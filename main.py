@@ -71,9 +71,12 @@ def search(song):
 def lyrics(song):
         fin = search(song)
         text = f'**🎶 Successfully Extracted Lyrics Of {song} 🎶**\n\n\n\n'
-        text += f'`{fin["lyrics"]}`'
-        text += '\n\n\n**Made With ❤️ By @EKBOTZ_UPDATE**'
-        return text
+        if 'error':
+                print("no song")
+        else:
+                text += f'`{fin["lyrics"]}`'
+                text += '\n\n\n**Made With ❤️ By @EKBOTZ_UPDATE**'
+                return text
 
 
 Ek.run()
