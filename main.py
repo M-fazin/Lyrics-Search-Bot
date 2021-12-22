@@ -59,7 +59,6 @@ async def sng(bot, message):
                 await hy.delete()
                 await Ek.send_message(chat_id, text = rpl, reply_to_message_id = message.message_id, reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Dev 🔗 ", url = f"github.com/M-fazin")], [InlineKeyboardButton("🧑‍💻 Channel", url = "https://telegram.me/EKBOTZ_UPDATE"),InlineKeyboardButton("🗃️ Source Code", url = "https://github.com/M-fazin/Lyrics-Search-Bot")]]))
         else:
-        	
         	await message.reply_text(f"I Can't Find A Song With `{song}`", quote = True, reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🧑‍💻 Developer", url = f"github.com/M-fazin")], [InlineKeyboardButton("🧑‍💻 Channel", url = "https://telegram.me/EKBOTZ_UPDATE"),InlineKeyboardButton("🗃️ Source Code", url = "https://github.com/M-fazin/Lyrics-Search-Bot")]]))
 
 
@@ -71,12 +70,9 @@ def search(song):
 def lyrics(song):
         fin = search(song)
         text = f'**🎶 Successfully Extracted Lyrics Of {song} 🎶**\n\n\n\n'
-        if 'error' in search(song):
-                print("no song")
-        else:
-                text += f'`{fin["lyrics"]}`'
-                text += '\n\n\n**Made With ❤️ By @EKBOTZ_UPDATE**'
-                return text
+        text += f'`{fin["lyrics"]}`'
+        text += '\n\n\n**Made With ❤️ By @EKBOTZ_UPDATE**'
+        return text
 
 
 Ek.run()
