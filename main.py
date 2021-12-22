@@ -71,7 +71,7 @@ def search(song):
 def lyrics(song):
         fin = search(song)
         text = f'**🎶 Successfully Extracted Lyrics Of {song} 🎶**\n\n\n\n'
-        if 'error':
+        if 'error' in search(song):
                 print("no song")
         else:
                 text += f'`{fin["lyrics"]}`'
